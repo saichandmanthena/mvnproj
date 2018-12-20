@@ -5,6 +5,11 @@ pipeline {
             steps {
                 sh "rm -rf mvnproj"
                 sh "git clone https://github.com/krishnachaitanya465hub/mvnproj.git"
+                sh "cd /root/mvnproj/"
+            }
+        }
+        stage('clean') { 
+            steps {
                 sh "mvn clean -f mvnproj"
             }
         }
