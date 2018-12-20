@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>SATHYA</groupId>
     <artifactId>DEVOPS</artifactId>
-    <version>3.0</version>
+    <version>3.5</version>
     <packaging>war</packaging>
     <name>myproj</name>
     <properties>
@@ -33,12 +33,12 @@
         <repository>
             <id>deployment</id>
             <name>Internal Releases</name>
-            <url>http://35.231.52.255:8081/repository/maven-releases/</url>
+            <url>http://35.196.12.203:8081/repository/maven-releases/</url>
         </repository>
         <snapshotRepository>
             <id>deployment</id>
             <name>Internal Snapshot Releases</name>
-            <url>http://35.231.52.255:8081/repository/maven-snapshots/</url>
+            <url>http://35.196.12.203:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
     <build>

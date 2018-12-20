@@ -1,0 +1,32 @@
+pipeline {
+    agent any 
+    stages {
+        stage('clone repo') { 
+            steps {
+                sh "rm -rf mvnproj"
+                sh "git clone https://github.com/krishnachaitanya465hub/mvnproj.git"
+                sh "mvn clean -f mvnproj"
+            }
+        }
+         stage('compile') { 
+            steps {
+                sh "mvn compile -f mvnproj"
+            }
+        }
+        stage('Test') { 
+            steps {
+                sh "mvn test -f mvnproj"
+            }
+        }
+        stage('package') { 
+            steps {
+                sh "mvn package -f mvnproj"
+            }
+        }
+         stage('deploy') { 
+            steps {
+                sh "mvn deploy -f mvnproj"
+            }
+        }
+    }
+}
