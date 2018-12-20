@@ -27,5 +27,10 @@ pipeline {
                 sh "mvn package"
             }
         }
+        stage('--deploy--') {
+            steps {
+                sh "cp /root/.jenkins/workspace/pipe-2/target/myproj.war /opt/apache-tomcat-8.5.35/webapps/"
+            }
+        }
     }
 }
